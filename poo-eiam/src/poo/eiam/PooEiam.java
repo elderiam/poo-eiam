@@ -21,8 +21,8 @@ public class PooEiam {
         //Tenemos que generar antes los objetos de las 
         //clases anteriores
         Usuario x=new Usuario();
-        x.altura=1.83f;
-        x.peso=96.6f;                
+        x.setAltura(1.83f);
+        x.setPeso(96.6f);                
         Imc algo=new Imc();
         algo.usr=x;
         //Calculamos el IMC a traves de su objeto

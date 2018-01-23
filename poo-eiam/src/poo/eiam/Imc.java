@@ -16,7 +16,7 @@ public class Imc {
     
     public String calcular(){
         
-        float imc= usr.peso/(usr.altura*usr.altura);
+        float imc= usr.getPeso()/(usr.getAltura()*usr.getAltura());
                 
         return "Aqui aparecera tu resultado: "+imc;
     }
