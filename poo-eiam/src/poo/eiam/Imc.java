@@ -18,6 +18,6 @@ public class Imc {
         
         float imc= usr.getPeso()/(usr.getAltura()*usr.getAltura());
                 
-        return "Aqui aparecera tu resultado: "+imc;
+        return "Tu resultado es: "+imc;
     }
 }
