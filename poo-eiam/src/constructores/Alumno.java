@@ -11,17 +11,29 @@ package constructores;
  */
 public class Alumno {
     
-    private String nombre;
-    private int edad;
+    private String matricula,nombre,paterno,materno;
+   /* private int edad;
     private boolean aprobado;
+    */
 
-    public Alumno(int x){
-        
+    /**
+     * @return the matricula
+     */
+    public String getMatricula() {
+        return matricula;
     }
+
+    /**
+     * @param matricula the matricula to set
+     */
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
     /**
      * @return the nombre
      */
-    public String getNombre(){
+    public String getNombre() {
         return nombre;
     }
 
@@ -33,26 +45,32 @@ public class Alumno {
     }
 
     /**
-     * @return the edad
+     * @return the paterno
      */
-    public int getEdad() {
-        return edad;
+    public String getPaterno() {
+        return paterno;
     }
 
     /**
-     * @param edad the edad to set
+     * @param paterno the paterno to set
      */
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setPaterno(String paterno) {
+        this.paterno = paterno;
     }
 
-    public boolean isAprobado() {
-        return aprobado;
+    /**
+     * @return the materno
+     */
+    public String getMaterno() {
+        return materno;
     }
 
-    public void setAprobado(boolean aprobado) {
-        this.aprobado = aprobado;
+    /**
+     * @param materno the materno to set
+     */
+    public void setMaterno(String materno) {
+        this.materno = materno;
     }
-    
+
     
 }
