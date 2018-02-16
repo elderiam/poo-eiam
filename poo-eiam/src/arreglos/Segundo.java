@@ -25,7 +25,7 @@ public class Segundo {
         int malo;
         int bueno[]=new int[1];
         
-        System.out.println(""+malo);
+        //System.out.println(""+malo); NO SE PUEDE IMPRIMIR VARIABLES NO INICIALIZADAS
         System.out.print(bueno[0]);
     }
 }
