@@ -5,6 +5,8 @@
  */
 package poliejemplo;
 
+import java.util.*;
+
 /**
  *
  * @author GrobbierElder
@@ -38,10 +40,24 @@ public class Macotas {
                     ServicioAnimales s= new ServicioAnimales();
        //La magia del polimorfismo
                         for(Animal animal:animales){
-                        
-                            s.servicioHacerRuido((ComportamientoAnimal) animal);
-                        
+                          s.servicioHacerRuido((ComportamientoAnimal) animal);
                         }
       
+                        //Vamos a generar un ArrayList y poner alli
+                        //algunos animalitos
+                        ArrayList<Animal> animalitos=new ArrayList<>(); 
+                        animalitos.add(new Pollo());
+                        animalitos.add(new Raton());
+                        animalitos.add(new Gato());
+                        animalitos.add(new Perro());
+                        animalitos.add(new Perro());
+                        
+                        for(Animal pet: animalitos){
+                         s.servicioHacerRuido((ComportamientoAnimal)pet); // Todo este ejercicio es un arreglo mutable
+                        }
+                        animalitos.get(0).setEdad(1);
+                        System.out.println(animalitos.get(0).getEdad());
     }
-}
+    
+ }
+
