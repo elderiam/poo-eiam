@@ -44,6 +44,12 @@ public class Ventanita extends javax.swing.JFrame {
 
         jLabel2.setText("Altura");
 
+        textoPeso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textoPesoActionPerformed(evt);
+            }
+        });
+
         textoAltura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textoAlturaActionPerformed(evt);
@@ -146,6 +152,10 @@ public class Ventanita extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void textoPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoPesoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textoPesoActionPerformed
 
     /**
      * @param args the command line arguments
