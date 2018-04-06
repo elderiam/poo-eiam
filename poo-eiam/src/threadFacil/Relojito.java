@@ -6,35 +6,42 @@
 package threadFacil;
 
 import java.time.LocalTime;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JLabel;
+import java.util.*;
+import javax.swing.*;
 
 /**
  *
  * @author GrobbierElder
  */
-public class Relojito extends javax.swing.JFrame{
+public class Relojito extends javax.swing.JFrame {
 
     /**
      * Creates new form Relojito
      */
     public Relojito() {
-        initComponents();        
-        Thread t1 = new Thread(new Runnable(){  
-             public void run() {
-                while(true){
-        LocalTime tiempo = LocalTime.now();
-            int hora = tiempo.getHour();
-            int minuto = tiempo.getMinute();
-            int segundo = tiempo.getSecond();
-            String ti;
-            ti="La hora es:"+hora+":"+minuto+":"+segundo;
-            Jtiempo.setText(ti);
+        initComponents();
+        setAlwaysOnTop(true);
+
+        Thread t1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true) {
+                    try {
+                        
+                        LocalTime tiempo = LocalTime.now();
+                        int hora = tiempo.getHour();
+                        int minuto = tiempo.getMinute();
+                        int segundo = tiempo.getSecond();
+                        Jtiempo.setText("La hora es:" + hora + ":" + minuto + ":" + segundo);
+                        Thread.sleep(1000);
+                        
+                    } catch (InterruptedException ex) {
+                        System.out.println(ex.getMessage());
+                    }
                 }
             }
         });
-        
+
         t1.start();
     }
 
@@ -108,13 +115,10 @@ public class Relojito extends javax.swing.JFrame{
             }
         });
     }
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Jtiempo;
     // End of variables declaration//GEN-END:variables
-
-
-  
 
 }

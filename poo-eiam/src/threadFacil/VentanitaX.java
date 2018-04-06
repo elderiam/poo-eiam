@@ -6,9 +6,6 @@
 package threadFacil;
 
 import java.time.LocalTime;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.*;
 
 /**
  *
@@ -21,21 +18,27 @@ public class VentanitaX extends javax.swing.JFrame {
      */
     public VentanitaX() {
         initComponents();
-        
-        Thread t1 = new Thread(new Runnable(){  
-            public void run() {
-             while(true){
-                    setSize(200, 200);
-                try {    
-                Thread.sleep(3000);
-                } catch (InterruptedException ex) {
-                Logger.getLogger(ProbarThreadds.class.getName()).log(Level.SEVERE, null, ex);
-                }
-             }
+        setSize(500, 500);
 
-           }
+        Thread t1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int decremento = 0;
+                while (true) {
+                    try {
+                        decremento = decremento + 10;
+                        if (500 - decremento < 0) {
+                            break;
+                        }
+                        setSize(500 - decremento, 500 - decremento);
+                        Thread.sleep(1000);
+                    } catch (InterruptedException ex) {
+                        System.out.println(ex.getMessage());
+                    }
+                }
+            }
         });
-        
+
         t1.start();
     }
 
